@@ -2,11 +2,8 @@ mb.Router = Backbone.Router.extend({
 
   routes: {
     '': 'home',
-    'memory/:id': 'memory',
-    'memory/tag/:tag': 'memory',
-    'memory/location/:location': 'location',
-    'memory/person/:person': 'person',
-    'new': 'newMemory'
+    'memories': 'home',
+    'memories/:id': 'memory',
   },
 
   initialize: function() {
@@ -25,11 +22,15 @@ mb.Router = Backbone.Router.extend({
   },
 
   memory: function(id) {
-    console.log('memory route id: '+id)
-  },
-
-  newMemory: function() {
-    console.log('new memory');
+    var collection = new mb.Collections.Memories();
+    collection.fetch({
+      success: function() {
+        var model = collection.get(id);
+        var view = new mb.Views.memory({
+          model: model
+        }); 
+        $('.main').html(view.render().el);
+      }
+    })
   }
-
 });

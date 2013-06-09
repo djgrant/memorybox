@@ -2,7 +2,7 @@ mb.Collections.Memories = Backbone.Collection.extend({
 
   model: mb.Models.Memory,
 
-  url: '/content.json'
+  url: '/api.json'
 
   // filterByTag:function(tag){
   //   var filtered = this.models.filter(function(model){
