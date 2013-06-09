@@ -1,0 +1,58 @@
+// Based on TWB
+// ------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 0 $baseLineHeight 25px;  
+  // DG. Changed bottom margin to full baseline height to respect baseline grid
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: $baseLineHeight;
+}
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Description Lists
+dl {
+  margin-bottom: $baseLineHeight;
+}
+dt,
+dd {
+  line-height: $baseLineHeight;
+}
+dt {
+  font-weight: bold;
+  line-height: $baseLineHeight - 1; // fix jank Helvetica Neue font bug
+}
+dd {
+  margin-left: $baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  dt {
+    float: left;
+    width: 120px;
+    clear: left;
+    text-align: right;
+    @include text-overflow();
+  }
+  dd {
+    margin-left: 130px;
+  }
+}

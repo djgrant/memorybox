@@ -1,0 +1,13 @@
+hr {
+	clear: both;
+	margin: 20px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #fff;
+}
+
+hr.soften {
+	@include background(linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent));
+	height: 1px;
+	margin: $baseLineHeight 0;
+	border: 0;
+}

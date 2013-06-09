@@ -1,0 +1,35 @@
+// Scaffolding
+// -------------------------------------------------------------------------------------------
+
+
+// Body reset
+// ----------
+
+/*
+ * 1. margin already declared in normalize. 
+ * 2. If using sansSerif, normalize font-family is usually 
+      the better choice - sans-serif defaults to the font that 
+      looks best in particular OS
+*/
+
+body {
+  margin: 0; /* 1 */
+  font-family: $baseFontFamily; /* 2 */
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background-color: $bodyBackground;
+}
+
+
+// Links
+// -----
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+a:hover {
+  color: $linkColorHover;
+  text-decoration: underline;
+}

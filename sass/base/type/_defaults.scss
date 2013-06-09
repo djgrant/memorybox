@@ -1,0 +1,51 @@
+html {
+  font-size: 62.5%;
+
+  &.touch {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $height-baseline;
+  color: $color-text;
+}
+
+p {
+  margin: 0 0 $baseLineHeight 0;
+  small {
+    font-size: $baseFontSize - 2;
+    color: $grayLight;
+  }
+}
+
+// Links
+// -----
+
+a {
+  text-decoration: none;
+}
+
+p a, .p a {
+  @extend %link;
+}
+
+
+
+// Headings
+// --------
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "myriad-pro", sans-serif;
+  margin: 0;
+  color: $headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    color: $grayLight;
+  }
+}

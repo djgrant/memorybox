@@ -1,0 +1,86 @@
+h1, .h1 {
+    font-size: 26px;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-style: normal;
+}
+
+h3, h4, .h3, .h4 {
+  color: #333;
+}
+
+h2, .h2 {
+    font-size: 20px;
+    font-size: 2rem;
+
+    &.subtitle {
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+}
+
+h3, .h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+h4, .h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h6, .h6 {
+  font-size: 1.1rem;
+}
+
+/***  Typeset positioning ***/
+
+h1 {
+    line-height: $baseLineHeight*1.5;
+    margin-bottom: $baseLineHeight/2;
+}
+
+h2, h3 {
+  margin: $baseLineHeight*2 0 $baseLineHeight 0;
+}
+
+h2 {
+    line-height: $baseLineHeight;
+
+    &.subtitle {
+      margin-top: -$baseLineHeight;
+      margin-bottom: $baseLineHeight;
+    }
+}
+
+h3 {
+  line-height: $baseLineHeight;
+}
+
+
+h4 {
+  margin: 0;
+}
+
+.leading-none {
+  margin: 0;
+}
+
+.leading-small {
+  margin-bottom: $baseLineHeight/1.4;
+}
+
+.leading {
+  margin-bottom: $baseLineHeight;
+}
