@@ -4,7 +4,8 @@ mb.Views.home = mb.Views.base.extend({
   className: '',
 
   initialize: function() {
-
+    var view = new mb.Views.title();
+    $('#js-title').html(view.render().el);
   },
 
   events: {

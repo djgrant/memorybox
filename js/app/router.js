@@ -16,7 +16,7 @@ mb.Router = Backbone.Router.extend({
         var view = new mb.Views.home({
           collection: collection
         });
-        $('.main').html(view.render().el);
+        $('#js-main').html(view.render().el);
       }
     });
   },
@@ -29,7 +29,7 @@ mb.Router = Backbone.Router.extend({
         var view = new mb.Views.memory({
           model: model
         }); 
-        $('.main').html(view.render().el);
+        $('#js-main').html(view.render().el);
       }
     })
   }
