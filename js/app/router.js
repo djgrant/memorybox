@@ -6,11 +6,8 @@ mb.Router = Backbone.Router.extend({
     'memories/:id': 'memory',
   },
 
-  initialize: function() {
-  },
-
   home: function() {
-    var collection = new mb.Collections.Memories();
+    var collection = new mb.Collections.Home();
     collection.fetch({
       success: function() {
         var view = new mb.Views.home({

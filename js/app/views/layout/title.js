@@ -1,5 +1,7 @@
 mb.Views.title = mb.Views.base.extend({
 
+  className: 'title',
+
   template: JST['templates/title.html'],
 
   events: {

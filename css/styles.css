@@ -447,16 +447,169 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 29, ../sass/objects/_helpers.sass */
+.title h1 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 45, ../sass/objects/_helpers.sass */
+.title h1.focusable:active,
+.title h1.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout
+ */
+/* Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 1, ../sass/views/_layout.sass */
+body {
+  background: #f2ebe5;
+}
+
+/* line 4, ../sass/views/_layout.sass */
+.app {
+  width: 950px;
+  margin: 0 auto;
+}
+
+@media(min-width: 1300px) {
+  /* line 15, ../sass/views/_layout.sass */
+  .header {
+    position: fixed;
+    left: 0;
+    width: 232px;
+    padding: 25px 10px;
+  }
+
+  /* line 21, ../sass/views/_layout.sass */
+  .l-title {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+/* line 25, ../sass/views/_layout.sass */
+.title {
+  text-align: center;
+}
+
+/* line 28, ../sass/views/_layout.sass */
+.title-anchor {
+  display: block;
+}
+
+/* line 31, ../sass/views/_layout.sass */
+.start-over {
+  display: block;
+  margin: 30px 0;
+  line-height: 60px;
+  text-decoration: none;
+  border: 1px solid #aaaaaa;
+  border-radius: 300px;
+}
+
+/* line 40, ../sass/views/_layout.sass */
+.main {
+  padding: 18px 0;
+}
+
 /* line 1, ../sass/views/_home.sass */
 .homeItem {
   float: left;
-  border: 1px solid #aaaaaa;
-  padding: 5px;
+  padding: 1px;
   margin: 10px;
+  background: white;
+  text-decoration: none;
+}
+/* line 10, ../sass/views/_home.sass */
+.homeItem:hover img {
+  opacity: 0.75;
+}
+/* line 14, ../sass/views/_home.sass */
+.homeItem h4 {
+  color: #333333;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  margin: 13px 0;
 }
 
-/* line 7, ../sass/views/_home.sass */
+/* line 21, ../sass/views/_home.sass */
 .l-homeItem-image {
+  width: 440px;
   height: 270px;
   overflow: hidden;
+}
+/* line 26, ../sass/views/_home.sass */
+.l-homeItem-image img {
+  width: 100%;
+}
+
+/* line 1, ../sass/views/_memory.sass */
+.memory-main {
+  float: left;
+  width: 67%;
+  min-height: 200px;
+}
+
+/* line 6, ../sass/views/_memory.sass */
+.l-memory-main-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: white;
+  padding: 1px;
+}
+/* line 13, ../sass/views/_memory.sass */
+.l-memory-main-image img {
+  width: 100%;
+}
+
+/* line 16, ../sass/views/_memory.sass */
+.memory-related {
+  float: left;
+  width: 33%;
+  height: 420px;
+  padding-left: 30px;
+}
+
+/* line 23, ../sass/views/_memory.sass */
+.memory-related-item {
+  height: 210px;
+  overflow: hidden;
+}
+/* line 27, ../sass/views/_memory.sass */
+.memory-related-item img {
+  max-width: 100%;
 }

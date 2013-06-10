@@ -1,8 +1,8 @@
-mb.Collections.Memories = Backbone.Collection.extend({
+mb.Collections.Home = Backbone.Collection.extend({
 
   model: mb.Models.Memory,
 
-  url: 'api/api.json'
+  url: 'api/api-home.json'
 
   // filterByTag:function(tag){
   //   var filtered = this.models.filter(function(model){
